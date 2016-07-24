@@ -3,13 +3,11 @@
 
 #define SCREEN_WIDTH  640
 #define SCREEN_HEIGHT 480
-#define CHAR_WIDTH 10
-#define CHAR_HEIGHT 10
 #define TICK_INTERNAL 100
 
 #define SDL_ERR() (fprintf(stderr, "%s:%d %s\n", __FILE__, __LINE__, SDL_GetError()), exit(EXIT_FAILURE))
 
-int main(int argc, char **argv) {
+int main() {
 
 	if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) != 0)
 		SDL_ERR();
